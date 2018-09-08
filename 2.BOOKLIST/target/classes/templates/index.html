@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+ 
+ <link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+ <link th:href="@{/css/style.css}" href="../css/style.css" rel="stylesheet"/>
+ 
+
+<title>BookList  |  Home</title>
+
+<style>
+	#header {
+	    background-color:black;
+	    color:white;
+	    text-align:center;
+	    padding:5px;
+	}
+	#nav {
+	    line-height:30px;
+	    background-color:#eeeeee;
+	    height:560px;
+	    width:100px;
+	    float:left;
+	    padding:5px; 
+	}
+	#section {
+	    width:1000px;
+	    float:left;
+	    padding:10px; 
+	}
+	#footer {
+	    background-color:black;
+	    color:white;
+	    clear:both;
+	    text-align:center;
+	    padding:5px;
+	    margin-bottom:0px; 
+	}
+	#p {
+		font-family: arial;
+	    font-size:180%;
+	    color:white;
+	}
+</style>
+
+
+</head>
+<body>
+
+
+	<div id="header">
+		<div id="p">BOOK LIST</div>
+	</div>
+	
+	<div id="nav">
+		<h3><a href="/index">Home</a></h3><br/>
+		<h3><a href="/bookList">List</a></h3><br/>
+	</div>
+	
+	<div id="section">
+		<br></br>
+		<br></br>
+		<center><p>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;提供書籍名稱、頁數、重點管理，請點選List開始服務!</p></center>
+	</div>
+	
+	<div id="footer">
+	Copyright Ruan.co
+	</div>
+
+</body>
+</html>

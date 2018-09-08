@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+<title>BookList  |  List</title>
+<style>
+#header {
+	    background-color:black;
+	    color:white;
+	    text-align:center;
+	    padding:5px;
+	}
+	#nav {
+	    line-height:30px;
+	    background-color:#eeeeee;
+	    height:560px;
+	    width:100px;
+	    float:left;
+	    padding:5px; 
+	}
+	#section {
+	    width:1000px;
+	    float:left;
+	    padding:10px; 
+	}
+	#footer {
+	    background-color:black;
+	    color:white;
+	    clear:both;
+	    text-align:center;
+	    padding:5px;
+	    margin-bottom:0px; 
+	}
+	#p {
+		font-family: arial;
+	    font-size:180%;
+	    color:white;
+	}
+	 
+</style>
+
+</head>
+<body>
+	
+	<div id="header">
+		<div id="p">BOOK LIST</div>
+	</div>
+	
+	<div id="nav">
+		<h3><a href="/index">Home</a></h3><br/>
+		<h3><a href="/bookList">List</a></h3><br/>
+	</div>
+	
+	<div id="section">
+		
+		<table class="table table-hover">
+			<thead>
+	        <tr>
+		            <th>書名</th>
+		            <th>頁數</th>
+		            <th>備註</th>
+		            <th>編輯</th>
+		            <th>刪除</th>
+	        </tr>
+	        </thead>
+	        <tbody>
+			<tr th:each="bookEntity : ${books}">
+		            <!-- <th scope="row" th:text="${bookEntity.id}"></th> -->
+				    <td th:text="${bookEntity.bookname}"></td>
+				    <td th:text="${bookEntity.page}"></td>
+				    <td th:text="${bookEntity.point}"></td>
+				    <td><a th:href="@{/toEdit(id=${bookEntity.id})}">edit</a></td>
+            		<td><a th:href="@{/delete(id=${bookEntity.id})}">delete</a></td>
+	        </tr>
+	        </tbody>
+        </table>
+	</div>
+	
+	<div class="form-group">
+	    <div class="col-md-2 control-label">
+	        <a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">add</a>
+	    </div>
+	</div>
+	
+	
+	<div id="footer">
+	Copyright Ruan.co
+	</div>
+</body>
+</html>
